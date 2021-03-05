@@ -1,8 +1,11 @@
 library(fivethirtyeight)
 library(tidyverse)
 
+# Load steak survey dataset
 data("steak_survey", package="fivethirtyeight")
 
+# create subset, no Missing NAs
+# Pick a specific region
 sdat <- na.omit(steak_survey) %>%
   filter(region=="Mountain")
 
