@@ -12,7 +12,7 @@ knitr::opts_chunk$set(warning = FALSE)
 knitr::opts_chunk$set(message = FALSE)
 
 # Set missing NAs to blank
-option(knitr.kable.NA = ' ')
+options(knitr.kable.NA = '')
 
 #load R packages
 library(fivethirtyeight)
@@ -20,6 +20,8 @@ library(tidyverse)
 library(knitr)
 library(kableExtra)
 library(ggthemes)
+
+data("steak_survey", package="fivethirtyeight")
  
 
 ```
