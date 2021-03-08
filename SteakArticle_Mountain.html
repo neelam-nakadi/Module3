@@ -191,7 +191,7 @@ summary {
 
 
 <h1 class="title toc-ignore">Steak preferences in the USA</h1>
-<h3 class="subtitle">Summary Report For the <em><strong>Mountain</strong></em> Region</h3>
+<h3 class="subtitle">Summary Report For the Mountain Region</h3>
 <h4 class="author">Author : Neelam Nakadi, Statistician</h4>
 <h4 class="date">Monday, March 08, 2021</h4>
 
@@ -640,10 +640,10 @@ TRUE
 <div id="steak-preparation-preference-by-gender" class="section level2">
 <h2>Steak Preparation Preference by Gender</h2>
 <p>Finally, here is a breakdown of the 24 survey respondents for the <em><strong>Mountain</strong></em> region of the US on how they prefer their steak to be prepared by gender.</p>
-<pre class="r"><code>ggplot(sdat, aes(x = steak_prep, fill = female)) +
+<pre class="r"><code>ggplot(sdat, 
+       aes(x = steak_prep, fill = female)) +
   geom_bar(position=&quot;dodge&quot;,colour=&quot;black&quot;) +
-  ggtitle(paste0(&quot;Steak Preference by Gender: &quot;,
-          &quot;Mountain&quot;,&quot; Region&quot;)) +
+  ggtitle(paste0(&quot;Steak Preference by Gender: &quot;,params$region,&quot; Region&quot;)) +
   xlab(&quot;Steak Preparation Preference&quot;) +
   ylab(&quot;Number of Respondents&quot;) +
   scale_fill_manual(values=c(&quot;skyblue&quot;,&quot;palevioletred&quot;),
